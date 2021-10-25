@@ -20,6 +20,6 @@ handler.tags = ['']
 
 handler.command = /^join$/i
 
-handler.premium = true
+handler.owner = true
 
 module.exports = handler

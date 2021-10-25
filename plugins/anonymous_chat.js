@@ -20,15 +20,15 @@ async function handler(m, { command, usedPrefix }) {
         }
         case 'start': {
             if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                await this.sendButton(m.chat, '_Kamu masih berada di dalam anonymous chat, menunggu partner_', '© stikerin', 'Keluar', `${usedPrefix}leave`)
+                await this.sendButton(m.chat, '_Kamu masih berada di dalam anonymous chat, menunggu partner_', '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Keluar', `${usedPrefix}leave`)
                 throw false
             }
             let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
             if (room) {
-                await this.sendButton(room.a, '_Partner ditemukan!_', '© stikerin', 'Next', `${usedPrefix}next`)
+                await this.sendButton(room.a, '_Partner ditemukan!_', '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Next', `${usedPrefix}next`)
                 room.b = m.sender
                 room.state = 'CHATTING'
-                await this.sendButton(room.b, '_Partner ditemukan!_', '© stikerin', 'Next', `${usedPrefix}next`)
+                await this.sendButton(room.b, '_Partner ditemukan!_', '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Next', `${usedPrefix}next`)
             } else {
                 let id = + new Date
                 this.anonymous[id] = {
@@ -43,7 +43,7 @@ async function handler(m, { command, usedPrefix }) {
                         return who === this.a ? this.b : who === this.b ? this.a : ''
                     },
                 }
-                await this.sendButton(m.chat, '_Menunggu partner..._', '© stikerin', 'Keluar', `${usedPrefix}leave`)
+                await this.sendButton(m.chat, '_Menunggu partner..._', '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Keluar', `${usedPrefix}leave`)
             }
             break
         }

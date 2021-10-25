@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
 
     m.reply(`
 ┌─〔 Status 〕
-├ Aktif selama ${uptime}
+├ Aktif Selama ${uptime} | Mode: Public | Made With reteam.idシ︎
 ├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 ├ *${groups.length}* Grup
 ├ *${chats.length - groups.length}* Chat Pribadi

@@ -35,7 +35,7 @@ global.author = 'https://www.instagram.com/reteam.id/'
 
 global.wait = '_*Wait A Minutes...*_'
 global.eror = '_*Server Error*_'
-global.fla = 'https://telegra.ph/file/b08bd29e4f773d10b69c6.jpg''
+global.fla = 'https://telegra.ph/file/b08bd29e4f773d10b69c6.jpg'
 
 global.multiplier = 69 // Semakin tinggi, semakin sulit naik level
 

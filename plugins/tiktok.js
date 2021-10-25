@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let json = await res.json()
   // if (!json.status) throw json
   await m.reply(wait)
-  await conn.sendFile(m.chat, json.nowm, '', `${json.caption}\n\n© stikerin`, m)
+  await conn.sendFile(m.chat, json.nowm, '', `${json.caption}\n\n𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎`, m)
 
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')

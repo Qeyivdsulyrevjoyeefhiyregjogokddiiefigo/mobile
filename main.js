@@ -128,7 +128,10 @@ global.reloadHandler = function () {
     conn.off('group-update', conn.onGroupUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\n@desc'
+  conn.welcome = '𝙷𝙰𝙸 𝙺𝙰𝙲𝙺 👋🏻, @user!\n𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝙸𝙽 𝙶𝚁𝙾𝚄𝙿 @subject\n\n┏━━°𖣘❬ *𝙸𝙽𝙵𝙾 𝙾𝚆𝙽𝙴𝚁* ❭𖣘°━━┓\n   
+𝚈𝚃 : https://youtu.be/_De5EgwBPM8\n
+𝙸𝙶 :https://www.instagram.com/reteam.id/\n
+𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt\n\n@desc'
   conn.bye = '@user keluar'
   conn.spromote = '@user sekarang admin'
   conn.sdemote = '@user sekarang bukan admin'

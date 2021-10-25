@@ -21,6 +21,7 @@ const defaultMenu = {
 ││◦➛ Level : %level
 ││◦➛ Rank : %role
 ││◦➛ Umur : ${age} Tahun
+││◦➛ Sn : ${sn}
 ││◦➛ Database : %rtotalreg dari %totalreg
 │└────────────────┈ ⳹
 │       「 TIME 」

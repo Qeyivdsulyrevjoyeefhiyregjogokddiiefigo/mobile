@@ -30,10 +30,10 @@ global.APIKeys = { // APIKey nya disini
 }
 
 // Sticker WM
-global.packname = 'follow ig reteam.id'
-global.author = 'support me'
+global.packname = 'FOLLOW IG'
+global.author = 'https://www.instagram.com/reteam.id/'
 
-global.wait = '_*tunggu sedang di proses...*_'
+global.wait = '_*Wait A Minutes...*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 

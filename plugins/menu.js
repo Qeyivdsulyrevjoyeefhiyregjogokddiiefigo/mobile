@@ -12,8 +12,8 @@ const defaultMenu = {
 	┏━━°𖣘❬ *𝙸𝙽𝙵𝙾 𝙾𝚆𝙽𝙴𝚁* ❭𖣘°━━┓   
 	┣➥ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
 	┣➥ 𝙸𝙶 :https://www.instagram.com/reteam.id/
-   ┣➥ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt ━━━━━━━━━━━━━━━━━━━━━
-
+        ┣➥ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt 
+        └──
 	
 	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
 
@@ -192,97 +192,97 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
               "rows": [
                 {
                   "title": `Semua Perintah`,
-                  "description": "All menu",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐒𝐄𝐌𝐔𝐀 𝐅𝐈𝐓𝐔𝐑",
                   "rowId": `${_p}? all`
                 }, {
                   "title": "Game",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐆𝐀𝐌",
                   "rowId": `${_p}? game`
 
                 }, {
                   "title": "XP",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐗𝐏",
                   "rowId": `${_p}? xp`
 
                 }, {
                   "title": "Stiker",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐒𝐓𝐈𝐂𝐊𝐄𝐑",
                   "rowId": `${_p}? stiker`
                 }, {
                   "title": "Kerang Ajaib",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐊𝐄𝐑𝐀𝐍𝐆 𝐀𝐉𝐀𝐈𝐁",
                   "rowId": `${_p}? kerangajaib`
                 }, {
                   "title": "Quotes",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐐𝐔𝐎𝐓𝐄𝐒",
                   "rowId": `${_p}? quotes`
                 }, {
                   "title": "Admin",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐀𝐃𝐌𝐈𝐍",
                   "rowId": `${_p}? admin`
                 }, {
                   "title": "Grup",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐆𝐑𝐔𝐏",
                   "rowId": `${_p}? grup`
                 }, {
                   "title": "Premium",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐏𝐑𝐄𝐌𝐈𝐔𝐌",
                   "rowId": `${_p}? premium`
                 }, {
                   "title": "Internet",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐈𝐍𝐓𝐄𝐑𝐍𝐄𝐓",
                   "rowId": `${_p}? internet`
                 }, {
                   "title": "Anonymous",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐀𝐍𝐎𝐍𝐘𝐌𝐎𝐔𝐒",
                   "rowId": `${_p}? anonymous`
                 }, {
                   "title": "Nulis & Logo",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔",
                   "rowId": `${_p}? nulis`
                 }, {
                   "title": "Downloader",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑",
                   "rowId": `${_p}? downloader`
                 }, {
                   "title": "Tools",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐓𝐎𝐎𝐋𝐒",
                   "rowId": `${_p}? tools`
                 }, {
                   "title": "Fun",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐅𝐔𝐍",
                   "rowId": `${_p}? fun`
                 }, {
                   "title": "Database",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔",
                   "rowId": `${_p}? database`
                 }, {
                   "title": "Vote & Absen",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔",
                   "rowId": `${_p}? vote`
                 }, {
                   "title": "Al-Qur\'an",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔",
                   "rowId": `${_p}? quran`
                 }, {
                   "title": "Pengubah Suara",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔",
                   "rowId": `${_p}? audio`
                 }, {
                   "title": "Jadi Bot",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐉𝐀𝐃𝐈𝐁𝐎𝐆",
                   "rowId": `${_p}? jadibot`
                 }, {
                   "title": "Info",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐈𝐍𝐅𝐎",
                   "rowId": `${_p}? info`
                 }, {
                   "title": "Tanpa Kategori",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔",
                   "rowId": `${_p}? tanpakategori`
                 }, {
                   "title": "Owner",
-                  "description": "",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐎𝐖𝐍𝐄𝐑",
                   "rowId": `${_p}? owner`
                 }
               ]

@@ -15,7 +15,7 @@ let handler = async (m, { conn, text, participants, isAdmin, isOwner }) => {
 }
 
 handler.help = ['tagall']
-handler.tags = ['group', 'owner']
+handler.tags = ['group', 'admin']
 handler.command = ['tagall']
 
 module.exports = handler

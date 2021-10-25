@@ -6,8 +6,7 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-
-       🌹 𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗 🌹
+🌹 𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗 🌹
 	
 ╭━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
 │ ${ucapan()}, Kack👋🏻 ${name}
@@ -42,18 +41,17 @@ const defaultMenu = {
 	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
 
 
-%readmore`.trimStart(),
-  header: '┏━━☕︎°❬ *%category* ❭°☕︎━━┓',
-  body: '┣➥*٬࿊⃟🤡* %cmd %islimit %isPremium',
-  footer: '└────\n',
+  `.trimStart(),
+  header: '\n*┏━━☕︎°❬ *%category* ❭°☕︎━━┓\n',
+  body: '┣➥*٬࿊⃟🤡* _%cmd_ %islimit %isPremium',
+  footer: '\n',
   after: `
-
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'vote', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'update', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -79,6 +77,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'jadibot': 'Jadi Bot',
     'info': 'Info',
     '': 'Tanpa Kategori',
+    'update': 'Fitur Baru', 
   }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -144,6 +143,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'tanpakategori') tags = {
     '': 'Tanpa Kategori'
   }
+  if (teks == 'update') tags = {
+    'update': 'Fitur Baru'
+  }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
     'host': 'Host',
@@ -206,107 +208,143 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `${ucapan()}, Kack👋🏻 ${name}`.trim(),
-          "description": "𝙼𝙰𝙳𝙴 𝚆𝙸𝚃𝙷 𝚁𝙴𝚃𝙴𝙰𝙼",
-          "buttonText": "Click Here",
+          "title": `
+🌹𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗🌹
+ *⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀*    
+ ${ucapan()}, Kack ${name} 
+ᚸ⃝⃘⃟۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪ࣤ ✰ཻ͜҈ະ̽▹┈─┈─┈─┈─┈─┈─┈𖣘
+Saya Adalah Bot Wa Yang\nDi Rancang Untuk\nFun
+
+VC & CALL BOT = BLOCK
+
+SPAM = BANNED + BLOCK
+
+𝐍𝐨𝐭𝐞 : 𝐎𝐫𝐚𝐧𝐠 𝐛𝐚𝐢𝐤 𝐚𝐝𝐚𝐥𝐚𝐡 𝐤𝐢𝐭𝐚 𝐲𝐚𝐧𝐠 𝐦𝐞𝐧𝐠𝐡𝐚𝐫𝐠𝐚𝐢 𝐤𝐚𝐫𝐲𝐚 𝐨𝐫𝐚𝐧𝐠
+
+𝐹𝑜𝑙𝑙𝑜𝑤 & 𝑆𝑢𝑏𝑠
+
+𝙶𝚁𝚄𝙿 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt
+
+𝙸𝙶 = https://www.instagram.com/reteam.id/
+
+𝚈𝚃 = https://youtu.be/s1yUhMyqIYg
+
+𝚆𝙴𝙱 = reteam.com
+
+▬▭▭▬▭▭▬▭▭▬▭▭▭▭▭▬ '*╼⃘۪۪─̇─̸᰷᰷─̸᰷᰷┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴─̸᰷᰷─̸᰷᰷─̇╼⃘۪*
+          `.trim(),
+          "description": "Silahkan pilih menu *BOT* di bawah ya kak!",
+          "buttonText": "Pilih Disini",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
                   "title": `Semua Perintah`,
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐒𝐄𝐌𝐔𝐀 𝐅𝐈𝐓𝐔𝐑",
-                  "rowId": `${_p}? all`
+                  "description": "\n\n*Menampilkan semua menu bot kak*",
+                  "rowId": ".? all"
                 }, {
                   "title": "Game",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐆𝐀𝐌𝐄",
-                  "rowId": `${_p}? game`
+                  "description": "\n\n*Bermain game & dapatkan xp kak*",
+                  "rowId": ".? game"
 
                 }, {
-                  "title": "XP",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐗𝐏",
-                  "rowId": `${_p}? xp`
+                  "title": "XP & Limit",
+                  "description": "\n\n*Cara cek Level xp & Limit kak*",
+                  "rowId": ".? xp"
 
                 }, {
                   "title": "Stiker",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐒𝐓𝐈𝐂𝐊𝐄𝐑",
-                  "rowId": `${_p}? stiker`
+                  "description": "\n\n*Membuat stiker dan lainnya kak*",
+                  "rowId": ".? stiker"
                 }, {
                   "title": "Kerang Ajaib",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐊𝐄𝐑𝐀𝐍𝐆 𝐀𝐉𝐀𝐈𝐁",
-                  "rowId": `${_p}? kerangajaib`
+                  "description": "\n\n*Jawaban random dari bot kak,*\n*masak gak tau gak pernah nonton Spongebob ya?*",
+                  "rowId": ".? kerangajaib"
                 }, {
                   "title": "Quotes",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐐𝐔𝐎𝐓𝐄𝐒",
-                  "rowId": `${_p}? quotes`
+                  "description": "\n\n*Quotes random kak,*\n*yang suka baca quotes*",
+                  "rowId": ".? quotes"
                 }, {
                   "title": "Admin",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐀𝐃𝐌𝐈𝐍",
-                  "rowId": `${_p}? admin`
+                  "description": "\n\n*Fitur grup hanya untuk admin kak*",
+                  "rowId": ".? admin"
                 }, {
                   "title": "Grup",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐆𝐑𝐔𝐏",
-                  "rowId": `${_p}? grup`
+                  "description": "\n\n*Seting grup dan lainnya kak*",
+                  "rowId": ".? grup"
                 }, {
                   "title": "Premium",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐏𝐑𝐄𝐌𝐈𝐔𝐌",
-                  "rowId": `${_p}? premium`
+                  "description": "\n\n*Fitur khusus member premium ya kak*",
+                  "rowId": ".? premium"
                 }, {
                   "title": "Internet",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐈𝐍𝐓𝐄𝐑𝐍𝐄𝐓",
-                  "rowId": `${_p}? internet`
+                  "description": "\n\n*Searching di google dan lainnya kak*",
+                  "rowId": ".? internet"
                 }, {
                   "title": "Anonymous",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐀𝐍𝐎𝐍𝐘𝐌𝐎𝐔𝐒",
-                  "rowId": `${_p}? anonymous`
+                  "description": "\n\n*Fitur mencari teman chat kak*\n\n*Note*\n*Cuma bisa di private chat ya kak*",
+                  "rowId": ".? anonymous"
                 }, {
                   "title": "Nulis & Logo",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐍𝐔𝐋𝐈𝐒",
-                  "rowId": `${_p}? nulis`
+                  "description": "\n\n*Nulis di buku dengan bot kak*",
+                  "rowId": ".? nulis"
                 }, {
                   "title": "Downloader",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑",
-                  "rowId": `${_p}? downloader`
+                  "description": "\n\n*Mau download sesuatu?*",
+                  "rowId": ".? downloader"
                 }, {
                   "title": "Tools",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐓𝐎𝐎𝐋𝐒",
-                  "rowId": `${_p}? tools`
+                  "description": "\n\n*Mengubah media ke bentuk lainnya kak*",
+                  "rowId": ".? tools"
                 }, {
                   "title": "Fun",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐅𝐔𝐍",
-                  "rowId": `${_p}? fun`
+                  "description": "\n\n*Fun fitur,*\n*ingat ini cuma main² ya kak jangan baperan:v*",
+                  "rowId": ".? fun"
                 }, {
                   "title": "Database",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄",
-                  "rowId": `${_p}? database`
+                  "description": "\n\n*Database bot kak*",
+                  "rowId": ".? database"
                 }, {
                   "title": "Vote & Absen",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐕𝐎𝐓𝐄",
-                  "rowId": `${_p}? vote`
+                  "description": "\n\n*Absen dan Vote grup kak*",
+                  "rowId": ".? vote"
                 }, {
                   "title": "Al-Qur\'an",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐀𝐋-𝐐𝐔𝐑 𝐀𝐍",
-                  "rowId": `${_p}? quran`
+                  "description": "\n\n*Fitur keagamaan kak,*\n*tetap jaga toleransi beragama ya kak*",
+                  "rowId": ".? quran"
                 }, {
                   "title": "Pengubah Suara",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐏𝐄𝐍𝐆𝐔𝐁𝐀𝐇 𝐒𝐔𝐀𝐑𝐀",
-                  "rowId": `${_p}? audio`
+                  "description": "\n\n*Mengubah audio\/vn ke suara lain kak*",
+                  "rowId": ".? audio"
                 }, {
                   "title": "Jadi Bot",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐉𝐀𝐃𝐈𝐁𝐎𝐓",
-                  "rowId": `${_p}? jadibot`
+                  "description": "\n\n*Ftur jadi bot sementara ya kak*",
+                  "rowId": ".? jadibot"
                 }, {
                   "title": "Info",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐈𝐍𝐅𝐎",
-                  "rowId": `${_p}? info`
+                  "description": "\n\n*Info tentang bot dan lainnya kak*",
+                  "rowId": ".? info"
                 }, {
                   "title": "Tanpa Kategori",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐓𝐀𝐍𝐏𝐀 𝐊𝐀𝐓𝐄𝐆𝐎𝐑𝐈",
-                  "rowId": `${_p}? tanpakategori`
+                  "description": "\n\n-",
+                  "rowId": ".? tanpakategori"
+                }, {
+                  "title": "Update Fitur",
+                  "description": "\n\n*Fitur baru*\n*jika ada yang eror harap laporkan ya kak*\n\n*contoh #report laporanmu*",
+                  "rowId": ".? update"
                 }, {
                   "title": "Owner",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐎𝐖𝐍𝐄𝐑",
-                  "rowId": `${_p}? owner`
+                  "description": "\n\n*Fitur ini khusus untuk pemilik bot ya kak*",
+                  "rowId": ".? owner"
+                },{
+                  "title": "Grup Official",
+                  "description": "\n\n*Grup official forum bot*\n*jangan lupa join ya kak*",
+                  "rowId": ".groupbot"
+                },{
+                  "title": "Pemilik Bot",
+                  "description": "Mau tau pemilik bot? bisa klik ini kok",
+                  "rowId": ".owner"
                 }
               ]
             }
@@ -395,7 +433,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝑴𝒂𝒅𝒆 𝒘𝒊𝒕𝒉 @𝑟𝑒𝑡𝑒𝑎𝑚', 'Owner', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃❦︎', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

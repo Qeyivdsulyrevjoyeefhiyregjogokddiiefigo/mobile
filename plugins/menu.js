@@ -47,12 +47,7 @@ const defaultMenu = {
   body: '┣➥*٬࿊⃟🤡* %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*𝚃𝚑𝚊𝚗𝚔𝚜 𝚃𝚘 ☕︎
-𒊹︎︎︎𝚁𝙴𝚃𝙴𝙰𝙼 𝙸𝙳
-𒊹︎︎︎𝙰𝙳𝙸𝚆𝙰𝙹𝚂𝙷𝙸𝙽𝙶
-𒊹︎︎︎𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿
-𒊹︎︎︎𝙰𝙻𝙻 𝙲𝚁𝙴𝙰𝚃𝙾𝚁*
-${'```Bot WhatsApp```'}
+
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -305,7 +300,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐈𝐍𝐅𝐎",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "Tanpa kategori",
+                  "title": "Tanpa Kategori",
                   "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐓𝐀𝐍𝐏𝐀 𝐊𝐀𝐓𝐄𝐆𝐎𝐑𝐈",
                   "rowId": `${_p}? tanpakategori`
                 }, {

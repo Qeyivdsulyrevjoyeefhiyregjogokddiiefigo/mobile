@@ -25,7 +25,7 @@ Bonus: ${poin} XP
         await m.reply(caption),
         json, poin,
         setTimeout(async () => {
-            if (conn.tebaklagu[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, '© stikerin', 'Tebak Lirik', `.tebaklirik`, conn.tebaklagu[id][0])
+            if (conn.tebaklagu[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Tebak Lirik', `.tebaklirik`, conn.tebaklagu[id][0])
             delete conn.tebaklagu[id]
         }, timeout)
     ]

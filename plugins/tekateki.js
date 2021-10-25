@@ -1,4 +1,4 @@
-let fetch = require('node-fetch')
+let fs = require('fs')
 let timeout = 120000
 let poin = 500
 let handler = async (m, { conn, usedPrefix }) => {
@@ -8,20 +8,20 @@ let handler = async (m, { conn, usedPrefix }) => {
         conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tekateki[id][0])
         throw false
     }
-    let src = await (await fetch('https://raw.githubusercontent.com/BochilTeam/database/master/games/tekateki.json')).json()
-    let json = src[Math.floor(Math.random() * src.length)]
+    let tekateki = JSON.parse(fs.readFileSync(`./src/tekateki.json`))
+    let json = tekateki[Math.floor(Math.random() * tekateki.length)]
     let caption = `
-${json.soal}
+${json.pertanyaan}
 
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}tete untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.tekateki[id] = [
-        await conn.send2Button(m.chat, caption, '© stikerin', 'Bantuan', `.tete`, m),
+        await conn.sendButton(m.chat, caption, 'Butuh bantuan?\nklik di bawah!', 'Bantuan', '.tete'),
         json, poin,
         setTimeout(async () => {
-            if (conn.tekateki[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© stikerin', 'Teka Teki', `.tekateki`, conn.tekateki[id][0])
+            if (conn.tekateki[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, 'Mau main lagi?\nklik di bawah!', 'Teka Teki', `.tekateki`)
             delete conn.tekateki[id]
         }, timeout)
     ]

@@ -15,12 +15,12 @@ const defaultMenu = {
 ┌┤      「 USER 」
 ││◦➛ Nama : %name
 ││◦➛ Money : 0
-││◦➛ Exp : %level (%exp / %maxexp) [%xp4levelup]
+││◦➛ Exp : (%exp / %maxexp) [%xp4levelup]
 ├│◦➛ %totalexp XP 
 ││◦➛ Limit : %limit Limit
-││◦➛ Level : 1
+││◦➛ Level : %level
 ││◦➛ Rank : %role
-││◦➛ Umur : 16 Thn
+││◦➛ Umur : ${age} Tahun
 ││◦➛ Database : %rtotalreg dari %totalreg
 │└────────────────┈ ⳹
 │       「 TIME 」
@@ -35,7 +35,7 @@ const defaultMenu = {
 │ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
 │ 𝙸𝙶 :https://www.instagram.com/reteam.id/
 │ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt
-│ NOTE : *ORANG BAIK ADALAH KITA YANG MENGHARGAI KARYA ORANG*
+│ NOTE : *ORANG BAIK ADALAH ORANG YANG MENGHARGAI KARYA KITA*
 ╰━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙	
 	
 	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷

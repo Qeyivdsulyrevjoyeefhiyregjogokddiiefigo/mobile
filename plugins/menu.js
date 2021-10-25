@@ -6,27 +6,26 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
+
+
 🌹 𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗 🌹
 	
 ╭━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
-│ ${ucapan()}, Kack👋🏻 ${name}
+│ Hai Kack %name Jangan Lupa Bernafas
 └┬────────────────┈ ⳹
 ┌┤      「 USER 」
 ││◦➛ Nama : %name
-││◦➛ Money : 0
 ││◦➛ Exp : (%exp / %maxexp) [%xp4levelup]
 ├│◦➛ %totalexp XP 
 ││◦➛ Limit : %limit Limit
 ││◦➛ Level : %level
 ││◦➛ Rank : %role
-││◦➛ Umur : ${age} Tahun
-││◦➛ Sn : ${sn}
 ││◦➛ Database : %rtotalreg dari %totalreg
 │└────────────────┈ ⳹
 │       「 TIME 」
-│◦➛ Hari : %date
+│◦➛ Hari : %week
 │◦➛ Weton : %weton
-│◦➛ Tanggal : %week 
+│◦➛ Tanggal : %date
 │◦➛ Waktu : %time
 │◦➛ Islam : %dateIslamic
 │◦➛ Uptime : %uptime (%muptime)
@@ -38,13 +37,14 @@ const defaultMenu = {
 │ NOTE : *ORANG BAIK ADALAH ORANG YANG MENGHARGAI KARYA KITA*
 ╰━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙	
 	
+	
 	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
 
 
   `.trimStart(),
-  header: '\n*┏━━☕︎°❬ *%category* ❭°☕︎━━┓\n',
+  header: '\n┏━━☕︎°❬ *%category* ❭°☕︎━━┓\n',
   body: '┣➥*٬࿊⃟🤡* _%cmd_ %islimit %isPremium',
-  footer: '\n',
+  footer:'\n',
   after: `
 `,
 }
@@ -209,10 +209,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `
-🌹𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗🌹
+         
+         🌹𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗🌹
  *⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀*    
- ${ucapan()}, Kack ${name} 
-ᚸ⃝⃘⃟۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪ࣤ ✰ཻ͜҈ະ̽▹┈─┈─┈─┈─┈─┈─┈𖣘
+${ucapan()}, Kack 👋🏻 ${name}
+ᚸ⃝⃘⃟۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪ࣤ ✰ཻ͜҈ະ̽▹┈─┈─┈─┈─┈─┈─┈☠
 Saya Adalah Bot Wa Yang\nDi Rancang Untuk\nFun
 
 VC & CALL BOT = BLOCK
@@ -231,10 +232,10 @@ SPAM = BANNED + BLOCK
 
 𝚆𝙴𝙱 = reteam.com
 
-▬▭▭▬▭▭▬▭▭▬▭▭▭▭▭▬ '*╼⃘۪۪─̇─̸᰷᰷─̸᰷᰷┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴─̸᰷᰷─̸᰷᰷─̇╼⃘۪*
+▬▭▭▬▭▭▬▭▭▬▭▭▭▭▭▬ *╼⃘۪۪─̇─̸᰷᰷─̸᰷᰷┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴─̸᰷᰷─̸᰷᰷─̇╼⃘۪*
           `.trim(),
-          "description": "Silahkan pilih menu *BOT* di bawah ya kak!",
-          "buttonText": "Pilih Disini",
+          "description": "𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃",
+          "buttonText": "Click Here",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
@@ -433,7 +434,7 @@ SPAM = BANNED + BLOCK
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃❦︎', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

@@ -9,11 +9,34 @@ const defaultMenu = {
 
        🌹 𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗 🌹
 	
-	┏━━°𖣘❬ *𝙸𝙽𝙵𝙾 𝙾𝚆𝙽𝙴𝚁* ❭𖣘°━━┓   
-	┣➥ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
-	┣➥ 𝙸𝙶 :https://www.instagram.com/reteam.id/
-        ┣➥ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt 
-        └──
+╭━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
+│ ${ucapan()}, Kack👋🏻 ${name}
+└┬────────────────┈ ⳹
+┌┤      「 USER 」
+││◦➛ Nama : %name
+││◦➛ Money : 0
+││◦➛ Exp : %level (%exp / %maxexp) [%xp4levelup]
+├│◦➛ %totalexp XP 
+││◦➛ Limit : %limit Limit
+││◦➛ Level : 1
+││◦➛ Rank : %role
+││◦➛ Umur : 16 Thn
+││◦➛ Database : %rtotalreg dari %totalreg
+│└────────────────┈ ⳹
+│       「 TIME 」
+│◦➛ Hari : %date
+│◦➛ Weton : %weton
+│◦➛ Tanggal : %week 
+│◦➛ Waktu : %time
+│◦➛ Islam : %dateIslamic
+│◦➛ Uptime : %uptime (%muptime)
+├──────────────────┈ ⳹
+│      「 INFO OWNER 」
+│ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
+│ 𝙸𝙶 :https://www.instagram.com/reteam.id/
+│ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt
+│ NOTE : *ORANG BAIK ADALAH KITA YANG MENGHARGAI KARYA ORANG*
+╰━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙	
 	
 	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
 

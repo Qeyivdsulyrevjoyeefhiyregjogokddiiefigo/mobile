@@ -6,23 +6,18 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ Hai, %name!
-│
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
+
+       🌹 𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗 🌹
+	
+	┏━━°𖣘❬ *𝙸𝙽𝙵𝙾 𝙾𝚆𝙽𝙴𝚁* ❭𖣘°━━┓   
+	┣➥ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
+	┣➥ 𝙸𝙶 :https://www.instagram.com/reteam.id/
+   ┣➥ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt ━━━━━━━━━━━━━━━━━━━━━
+
+	
+	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
+
+
 %readmore`.trimStart(),
   header: '┏━━☕︎°❬ *%category* ❭°☕︎━━┓',
   body: '┣➥*٬࿊⃟🤡* %cmd %islimit %isPremium',
@@ -189,7 +184,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© stikerin",
+          "description": "𝙼𝙰𝙳𝙴 𝚆𝙸𝚃𝙷 𝚁𝙴𝚃𝙴𝙰𝙼",
           "buttonText": "Klik Disini",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -197,7 +192,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
               "rows": [
                 {
                   "title": `Semua Perintah`,
-                  "description": "",
+                  "description": "All menu",
                   "rowId": `${_p}? all`
                 }, {
                   "title": "Game",

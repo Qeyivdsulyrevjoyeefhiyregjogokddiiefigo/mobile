@@ -277,8 +277,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐈𝐍𝐅𝐎",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "Video",
-                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐕𝐈𝐃𝐄𝐎",
+                  "title": "Tanpa kategori",
+                  "description": "𝐌𝐄𝐍𝐀𝐌𝐏𝐈𝐋𝐊𝐀𝐍 𝐌𝐄𝐍𝐔 𝐓𝐀𝐍𝐏𝐀 𝐊𝐀𝐓𝐄𝐆𝐎𝐑𝐈",
                   "rowId": `${_p}? tanpakategori`
                 }, {
                   "title": "Owner",
@@ -372,7 +372,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ariffb', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), '𝑴𝒂𝒅𝒆 𝒘𝒊𝒕𝒉 @𝑟𝑒𝑡𝑒𝑎𝑚', 'Owner', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

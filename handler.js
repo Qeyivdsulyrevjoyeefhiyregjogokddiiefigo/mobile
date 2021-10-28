@@ -72,8 +72,8 @@ module.exports = {
         if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
         if (chat) {
           if (!('isBanned' in chat)) chat.isBanned = false
-          if (!('welcome' in chat)) chat.welcome = false
-          if (!('detect' in chat)) chat.detect = false
+          if (!('welcome' in chat)) chat.welcome = true
+          if (!('detect' in chat)) chat.detect = true
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
           if (!('sPromote' in chat)) chat.sPromote = ''
@@ -87,8 +87,8 @@ module.exports = {
           if (!('viewonce' in chat)) chat.viewonce = true
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
-          welcome: false,
-          detect: false,
+          welcome: true,
+          detect: true,
           sWelcome: '',
           sBye: '',
           sPromote: '',
@@ -105,26 +105,26 @@ module.exports = {
         let settings = global.db.data.settings[this.user.jid]
         if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
         if (settings) {
-          if (!'anon' in settings) settings.anon = true
-          if (!'anticall' in settings) settings.anticall = true
-          if (!'antispam' in settings) settings.antispam = true
-          if (!'antitroli' in settings) settings.antitroli = true
+          if (!'anon' in settings) settings.anon = false
+          if (!'anticall' in settings) settings.anticall = false
+          if (!'antispam' in settings) settings.antispam = false
+          if (!'antitroli' in settings) settings.antitroli = false
           if (!'backup' in settings) settings.backup = false
           if (!isNumber(settings.backupDB)) settings.backupDB = 0
           if (!'groupOnly' in settings) settings.groupOnly = false
           if (!'jadibot' in settings) settings.groupOnly = false
-          if (!'nsfw' in settings) settings.nsfw = true
+          if (!'nsfw' in settings) settings.nsfw = false
           if (!isNumber(settings.status)) settings.status = 0
         } else global.db.data.settings[this.user.jid] = {
-          anon: true,
-          anticall: true,
-          antispam: true,
-          antitroli: true,
+          anon: false,
+          anticall: false,
+          antispam: false,
+          antitroli: false,
           backup: false,
           backupDB: 0,
           groupOnly: false,
           jadibot: false,
-          nsfw: true,
+          nsfw: false,
           status: 0,
         }
       } catch (e) {
@@ -274,7 +274,7 @@ module.exports = {
           }
 
           m.isCommand = true
-          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // Pendapatkan XP per Command
+          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 20 // Pendapatkan XP per Command
           if (xp > 200) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
@@ -328,7 +328,7 @@ module.exports = {
                 console.error(e)
               }
             }
-            // if (m.limit) m.reply(+ m.limit + ' Limit terpakai') // Jadikan sebagai komentar jika kamu risih dengan pesan ini
+            if (m.limit) m.reply(+ m.limit + ' Limit terpakai') // Jadikan sebagai komentar jika kamu risih dengan pesan ini
           }
           break
         }
@@ -383,9 +383,9 @@ module.exports = {
         if (chat.welcome) {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
-            // let pp = './src/avatar_contact.png'
-            let pp = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
-            let ppgc = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
+             let pp = './src/avatar_contact.png'
+            //let pp = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
+            //let ppgc = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
             try {
               pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
               ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
@@ -399,7 +399,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://i.ibb.co/KhtRxwZ/dark.png")
+                .setBackground("https://telegra.ph/file/d015734ddf3ac2834edb3.jpg")
                 .toAttachment()
 
               let lea = await new knights.Goodbye()
@@ -408,7 +408,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://i.ibb.co/KhtRxwZ/dark.png")
+                .setBackground("https://telegra.ph/file/d015734ddf3ac2834edb3.jpg")
                 .toAttachment()
 
               this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {
@@ -421,7 +421,7 @@ module.exports = {
         }
         break
       case 'promote':
-        text = (chat.sPromote || this.spromote || conn.spromote || '@user sekarang Admin')
+        text = (chat.sPromote || this.spromote || conn.spromote || '@user sekarang adalah Admin')
       case 'demote':
         if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user sekarang bukan Admin')
         text = text.replace('@user', '@' + participants[0].split`@`[0])
@@ -483,15 +483,15 @@ ketik *.on delete* untuk mematikan pesan ini
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*Pemilik Bot*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Pemilik Bot*_',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_',
-    premium: 'Perintah ini hanya untuk pengguna _*Premium*_',
-    group: 'Perintah ini hanya dapat digunakan di grup',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi',
-    admin: 'Perintah ini hanya untuk *Admin* grup',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Arif.19*',
+    rowner: '*Mau ngapain?*',
+    owner: '*Mau ngapain?*',
+    mods: '*Hanya user vip yang bisa*',
+    premium: '*Lu bukan premium, beli prem dulu sama owner gua*',
+    group: '*Di sini mana bisa di grup sana*',
+    private: '*Pc gua aja*',
+    admin: '*Lu member mau ngapain?*',
+    botAdmin: 'Saya bukan*Admin* kak',
+    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Rasel.18*',
     nsfw: 'NSFW tidak aktif'
   }[type]
   if (msg) return m.reply(msg)

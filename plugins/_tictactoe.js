@@ -72,7 +72,7 @@ Room ID: ${room.id}
                 mentionedJid: this.parseMention(str)
             }
         })
-        await conn.sendButton(room.o, str, '© stikerin', 'Nyerah', 'nyerah', m, {
+        await conn.sendButton(room.o, str, '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Nyerah', 'nyerah', m, {
             contextInfo: {
                 mentionedJid: this.parseMention(str)
             }

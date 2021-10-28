@@ -16,8 +16,8 @@ let handler = async (m, { conn }) => {
   );
   const sticker = await createSticker(animatedGif, {
     type: StickerTypes.FULL,
-    pack: "petpet",
-    author: "fatur",
+    pack: "Pet",
+    author: "𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎",
   });
   await conn.sendMessage(m.chat, sticker, MessageType.sticker, {
     quoted: m,

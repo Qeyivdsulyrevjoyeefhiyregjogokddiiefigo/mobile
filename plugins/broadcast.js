@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_\nestimasi selesai ${chats.length * 1.5} detik`, m)
   for (let id of chats) {
     await delay(1500)
-    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '〔 Stikerin Broadcast 〕\n\n' + teks + '\n\n' + '© stikerin'), true).catch(_ => _)
+    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '〔 Reteam Broadcast 〕\n\n' + teks + '\n\n' + '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎'), true).catch(_ => _)
   }
   m.reply('_*Broadcast Selesai*_')
 }
@@ -14,7 +14,7 @@ handler.tags = ['owner']
 handler.command = /^(broadcast|bc)$/i
 handler.owner = true
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 

@@ -28,7 +28,7 @@ const defaultMenu = {
 │◦➛ Tanggal : %date
 │◦➛ Waktu : %time
 │◦➛ Islam : %dateIslamic
-│◦➛ Uptime : %uptime (%muptime)
+│◦➛ Runtime : %uptime (%muptime)
 ├──────────────────┈ ⳹
 │      「 INFO OWNER 」
 │ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8

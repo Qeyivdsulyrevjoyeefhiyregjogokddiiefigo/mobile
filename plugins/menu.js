@@ -434,7 +434,7 @@ SPAM = BANNED + BLOCK
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃', 'Owner 👑', `${_p}owner`, 'Donasi 💸', `${_p}donasi`, m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃', 'Owner', `.owner`, 'Donasi', `.donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

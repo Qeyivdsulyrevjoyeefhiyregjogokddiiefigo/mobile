@@ -11,7 +11,7 @@ const defaultMenu = {
 🌹 𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗 🌹
 	
 ╭━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
-│ Hai Kack %name Jangan Lupa Bernafas
+│ Hai Kack %name Selamat beraktifitas!
 └┬────────────────┈ ⳹
 ┌┤      「 USER 」
 ││◦➛ Nama : %name
@@ -28,7 +28,7 @@ const defaultMenu = {
 │◦➛ Tanggal : %date
 │◦➛ Waktu : %time
 │◦➛ Islam : %dateIslamic
-│◦➛ Runtime : %uptime (%muptime)
+│◦➛ Runtime : %uptime 
 ├──────────────────┈ ⳹
 │      「 INFO OWNER 」
 │ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
@@ -434,7 +434,7 @@ SPAM = BANNED + BLOCK
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃', 'Sewa Bot', 'Owner', '.tts hubungi pemilik bot jika kamu mau sewa bot', '.owner'm)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

@@ -116,15 +116,15 @@ module.exports = {
           if (!'nsfw' in settings) settings.nsfw = false
           if (!isNumber(settings.status)) settings.status = 0
         } else global.db.data.settings[this.user.jid] = {
-          anon: false,
-          anticall: false,
-          antispam: false,
-          antitroli: false,
+          anon: true,
+          anticall: true,
+          antispam: true,
+          antitroli: true,
           backup: false,
           backupDB: 0,
           groupOnly: false,
-          jadibot: false,
-          nsfw: false,
+          jadibot: true,
+          nsfw: true,
           status: 0,
         }
       } catch (e) {
@@ -483,7 +483,7 @@ ketik *.on delete* untuk mematikan pesan ini
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: '*Mau ngapain?*',
+    rowner: '*Perintah ini khusus owner*',
     owner: '*Mau ngapain?*',
     mods: '*Hanya user vip yang bisa*',
     premium: '*Lu bukan premium, beli prem dulu sama owner gua*',

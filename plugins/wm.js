@@ -38,6 +38,6 @@ handler.help = ['wm <packname>|<author>']
 handler.tags = ['sticker']
 handler.command = /^wm$/i
 
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

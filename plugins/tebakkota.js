@@ -20,10 +20,10 @@ Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}teko untuk bantuan
 `.trim()
     conn.tebakkota[id] = [
-        await conn.sendButton(m.chat, caption, '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Bantuan', '.teko', m),
+        await conn.sendButton(m.chat, caption, 'Kesulitan?\nklik di bawah!', 'Bantuan', '.teko', m),
         json, poin,
         setTimeout(async () => {
-            if (conn.tebakkota[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '𝑴𝒂𝒅𝒆 𝑾𝒊𝒕𝒉 𝑹𝒆𝒕𝒆𝒂𝒎.𝑰𝑫❦︎', 'Tebak Kota', '.tebakkota', conn.tebakkota[id][0])
+            if (conn.tebakkota[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, 'Mau main lagi?\nklik di bawah!', 'Tebak Kota', '.tebakkota', conn.tebakkota[id][0])
             delete conn.tebakkota[id]
         }, timeout)
     ]

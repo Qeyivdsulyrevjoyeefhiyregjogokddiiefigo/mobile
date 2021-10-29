@@ -12,8 +12,8 @@ handler.all = async function (m) {
     await this.sendButton(m.chat, `
 Hai, ${ucapan()}
 
-${user.banned ? 'kamu dibanned' : 'Ada yang bisa saya bantu?\nKetik .menu untuk menampilkan list menu\nhttps://chat.whatsapp.com/FD3C7XgqSTbCD9IEp4oVSC'}
-`.trim(), 'Assalamualaikum\nWallaikumsalam', user.banned ? 'Pemilik Bot' : 'Menu', user.banned ? ',owner' : ',?', m)
+${user.banned ? 'kamu dibanned' : 'Ada yang bisa saya bantu?\nKetik .menu untuk menampilkan list menu\nJika mau chat dengan simi ketik #on simi atau klick di bawah\n Jika mau offin chat simi ketik .off simi\n\nhttps://chat.whatsapp.com/FD3C7XgqSTbCD9IEp4oVSC'}
+`.trim(), 'Assalamualaikum\nWallaikumsalam', user.banned ? 'Owner 👑' : 'Nyalakan chat simi', user.banned ? ',owner' : ',on simi', m)
     user.pc = new Date * 1
 }
 

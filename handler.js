@@ -62,7 +62,7 @@ module.exports = {
           level: 0,
           call: 0,
           role: 'Bronze',
-          autolevelup: false,
+          autolevelup: true,
           pc: 0,
           warning: 0,
           pasangan: '',
@@ -408,7 +408,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://telegra.ph/file/d015734ddf3ac2834edb3.jpg")
+                .setBackground("https://telegra.ph/file/7a93471059d1d3ac8caa2.jpg")
                 .toAttachment()
 
               this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {

@@ -1,6 +1,6 @@
 let fs = require('fs')
 let timeout = 120000
-let poin = 50000
+let poin = 500
 let handler = async (m, { conn, usedPrefix }) => {
     conn.tekateki = conn.tekateki ? conn.tekateki : {}
     let id = m.chat

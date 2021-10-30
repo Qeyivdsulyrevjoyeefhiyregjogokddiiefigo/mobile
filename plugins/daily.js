@@ -1,5 +1,5 @@
 const free = 500
-const prem = 9999999999999999
+const prem = 9999
 let handler = async (m, { conn, usedPrefix, isPrems }) => {
   if (db.data.users[m.sender].level < 1) return await conn.sendButton(m.chat, 'naikan level kamu', 'Klik dibawah untuk naik level', 'Level Up', `${usedPrefix}levelup`, m)
   let time = db.data.users[m.sender].lastclaim + 86400000

@@ -208,33 +208,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `
-         
-         🌹𝗛𝗘𝗟𝗟𝗢𝗪𝗢𝗥𝗟𝗗🌹
- *⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀꒷꒦꒷⁀*    
-${ucapan()}, Kack 👋🏻 ${name}
-ᚸ⃝⃘⃟۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪۪ࣤ ✰ཻ͜҈ະ̽▹┈─┈─┈─┈─┈─┈─┈☠
-Saya Adalah Bot Wa Yang\nDi Rancang Untuk\nFun
-
-VC & CALL BOT = BLOCK
-
-SPAM = BANNED + BLOCK
-
-𝐍𝐨𝐭𝐞 : 𝐎𝐫𝐚𝐧𝐠 𝐛𝐚𝐢𝐤 𝐚𝐝𝐚𝐥𝐚𝐡 𝐤𝐢𝐭𝐚 𝐲𝐚𝐧𝐠 𝐦𝐞𝐧𝐠𝐡𝐚𝐫𝐠𝐚𝐢 𝐤𝐚𝐫𝐲𝐚 𝐨𝐫𝐚𝐧𝐠
-
-𝐹𝑜𝑙𝑙𝑜𝑤 & 𝑆𝑢𝑏𝑠
-
-𝙶𝚁𝚄𝙿 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt
-
-𝙸𝙶 = https://www.instagram.com/reteam.id/
-
-𝚈𝚃 = https://youtu.be/s1yUhMyqIYg
-
-𝚆𝙴𝙱 = reteam.com
-
-▬▭▭▬▭▭▬▭▭▬▭▭▭▭▭▬ *╼⃘۪۪─̇─̸᰷᰷─̸᰷᰷┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴┅̮᪴─̸᰷᰷─̸᰷᰷─̇╼⃘۪*
+          ${ucapan()}, kak ${name} 🐤
           `.trim(),
-          "description": "𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃",
-          "buttonText": "Click Here",
+          "description": "Silahkan pilih menu *BOT* di bawah ya kak!",
+          "buttonText": "Pilih Disini",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
@@ -433,7 +410,7 @@ SPAM = BANNED + BLOCK
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 𝐑𝐞𝐭𝐞𝐚𝐦.𝐈𝐃', 'Owner', `.owner`, 'Donasi', `.donasi`, m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '© rasel ×͜×', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

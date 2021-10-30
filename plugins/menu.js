@@ -37,14 +37,13 @@ const defaultMenu = {
 │ NOTE : *ORANG BAIK ADALAH ORANG YANG MENGHARGAI KARYA KITA*
 ╰━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙	
 	
-	
-	߷❬ *𝗕𝗔𝗜𝗟𝗘𝗬𝗦 𝗦𝗘𝗟𝗙 𝗕𝗢𝗧* ❭߷
+
 
 
   `.trimStart(),
   header: '\n┏━━☕︎°❬ *%category* ❭°☕︎━━┓\n',
-  body: '┣➥*٬࿊⃟🤡* _%cmd_ %islimit %isPremium',
-  footer:'\n',
+  body: '🏮 %cmd %islimit %isPremium',
+  footer:'╰━━━━━━━━━━━━━━━━━━━━┈',
   after: `
 `,
 }

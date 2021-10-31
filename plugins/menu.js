@@ -252,55 +252,55 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "rowId": ".? grup"
                 }, {
                   "title": "Premium",
-                  "description": "\n\n*Fitur khusus member premium ya kak*",
+                  "description": "*Fitur khusus member premium ya*",
                   "rowId": ".? premium"
                 }, {
                   "title": "Internet",
-                  "description": "\n\n*Searching di google dan lainnya kak*",
+                  "description": "*Searching di google dan lainnya*",
                   "rowId": ".? internet"
                 }, {
                   "title": "Anonymous",
-                  "description": "\n\n*Fitur mencari teman chat kak*\n\n*Note*\n*Cuma bisa di private chat ya kak*",
+                  "description": "*Fitur mencari teman chat*",
                   "rowId": ".? anonymous"
                 }, {
                   "title": "Nulis & Logo",
-                  "description": "\n\n*Nulis di buku dengan bot kak*",
+                  "description": "*Nulis di buku dengan bot*",
                   "rowId": ".? nulis"
                 }, {
                   "title": "Downloader",
-                  "description": "\n\n*Mau download sesuatu?*",
+                  "description": "*Mau download sesuatu?*",
                   "rowId": ".? downloader"
                 }, {
                   "title": "Tools",
-                  "description": "\n\n*Mengubah media ke bentuk lainnya kak*",
+                  "description": "*Mengubah media ke bentuk lainnya*",
                   "rowId": ".? tools"
                 }, {
                   "title": "Fun",
-                  "description": "\n\n*Fun fitur,*\n*ingat ini cuma main² ya kak jangan baperan:v*",
+                  "description": "*Fun fitur*",
                   "rowId": ".? fun"
                 }, {
                   "title": "Database",
-                  "description": "\n\n*Database bot kak*",
+                  "description": "*Database bot*",
                   "rowId": ".? database"
                 }, {
                   "title": "Vote & Absen",
-                  "description": "\n\n*Absen dan Vote grup kak*",
+                  "description": "*Absen dan Vote grup*",
                   "rowId": ".? vote"
                 }, {
                   "title": "Al-Qur\'an",
-                  "description": "\n\n*Fitur keagamaan kak,*\n*tetap jaga toleransi beragama ya kak*",
+                  "description": "*Fitur keagamaan kak,*\n*tetap jaga toleransi beragama ya kak*",
                   "rowId": ".? quran"
                 }, {
                   "title": "Pengubah Suara",
-                  "description": "\n\n*Mengubah audio\/vn ke suara lain kak*",
+                  "description": "*Mengubah audio\/vn ke suara lain kak*",
                   "rowId": ".? audio"
                 }, {
                   "title": "Jadi Bot",
-                  "description": "\n\n*Ftur jadi bot sementara ya kak*",
+                  "description": "*Ftur jadi bot sementara ya kak*",
                   "rowId": ".? jadibot"
                 }, {
                   "title": "Info",
-                  "description": "\n\n*Info tentang bot dan lainnya kak*",
+                  "description": "*Info tentang bot dan lainnya kak*",
                   "rowId": ".? info"
                 }, {
                   "title": "Tanpa Kategori",
@@ -308,15 +308,15 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "rowId": ".? tanpakategori"
                 }, {
                   "title": "Update Fitur",
-                  "description": "\n\n*Fitur baru*\n*jika ada yang eror harap laporkan ya kak*\n\n*contoh #report laporanmu*",
+                  "description": "*Fitur baru*\n*jika ada yang eror harap laporkan ya kak*\n\n*contoh #report laporanmu*",
                   "rowId": ".? update"
                 }, {
                   "title": "Owner",
-                  "description": "\n\n*Fitur ini khusus untuk pemilik bot ya kak*",
+                  "description": "*Fitur ini khusus untuk pemilik bot ya kak*",
                   "rowId": ".? owner"
                 },{
                   "title": "Grup Official",
-                  "description": "\n\n*Grup official forum bot*\n*jangan lupa join ya kak*",
+                  "description": "*Grup official forum bot*\n*jangan lupa join ya kak*",
                   "rowId": ".groupbot"
                 },{
                   "title": "Pemilik Bot",

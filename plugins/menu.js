@@ -208,47 +208,47 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `
-          ${ucapan()}, kak ${name} 🐤
+          ${ucapan()}, Kack ${name} 
           `.trim(),
           "description": "Silahkan pilih menu *BOT* di bawah ya kak!",
-          "buttonText": "Pilih Disini",
+          "buttonText": "Click Here",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
                   "title": `Semua Perintah`,
-                  "description": "\n\n*Menampilkan semua menu bot kak*",
+                  "description": "*Menampilkan semua menu bot*",
                   "rowId": ".? all"
                 }, {
                   "title": "Game",
-                  "description": "\n\n*Bermain game & dapatkan xp kak*",
+                  "description": "*Menu bermain game & dapatkan xp*",
                   "rowId": ".? game"
 
                 }, {
                   "title": "XP & Limit",
-                  "description": "\n\n*Cara cek Level xp & Limit kak*",
+                  "description": "*Menu cek Level xp & Limit*",
                   "rowId": ".? xp"
 
                 }, {
                   "title": "Stiker",
-                  "description": "\n\n*Membuat stiker dan lainnya kak*",
+                  "description": "*Menu stiker dan lainnya*",
                   "rowId": ".? stiker"
                 }, {
                   "title": "Kerang Ajaib",
-                  "description": "\n\n*Jawaban random dari bot kak,*\n*masak gak tau gak pernah nonton Spongebob ya?*",
+                  "description": "*Menu random dari bot*",
                   "rowId": ".? kerangajaib"
                 }, {
                   "title": "Quotes",
-                  "description": "\n\n*Quotes random kak,*\n*yang suka baca quotes*",
+                  "description": "*Menu quotes random*",
                   "rowId": ".? quotes"
                 }, {
                   "title": "Admin",
-                  "description": "\n\n*Fitur grup hanya untuk admin kak*",
+                  "description": "*Menu fitur grup hanya untuk admin*",
                   "rowId": ".? admin"
                 }, {
                   "title": "Grup",
-                  "description": "\n\n*Seting grup dan lainnya kak*",
+                  "description": "*Menu seting grup dan lainnya*",
                   "rowId": ".? grup"
                 }, {
                   "title": "Premium",
@@ -410,7 +410,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), '© rasel ×͜×', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), 'https://www.instagram.com/reteam.id', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

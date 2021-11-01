@@ -50,7 +50,7 @@ module.exports = {
           if (!('pasangan' in user)) user.pasangan = ''
         } else global.db.data.users[m.sender] = {
           exp: 0,
-          limit: 10,
+          limit: 20,
           lastclaim: 0,
           registered: false,
           name: this.getName(m.sender),
@@ -62,7 +62,7 @@ module.exports = {
           level: 0,
           call: 0,
           role: 'Bronze',
-          autolevelup: true,
+          autolevelup: false,
           pc: 0,
           warning: 0,
           pasangan: '',
@@ -96,7 +96,7 @@ module.exports = {
           descUpdate: true,
           stiker: false,
           delete: true,
-          antiLink: false,
+          antiLink: true,
           expired: 0,
           antiBadword: true,
           viewonce: true,
@@ -383,35 +383,14 @@ module.exports = {
         if (chat.welcome) {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
-             let pp = './src/avatar_contact.png'
-            //let pp = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
-            //let ppgc = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
+            let pp = './src/avatar_contact.png'
             try {
-              pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
-              ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
+              pp = await this.getProfilePicture(user)
             } catch (e) {
             } finally {
-              text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
-                (chat.sBye || this.bye || conn.bye || 'Sampai jumpa, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-              let wel = await new knights.Welcome()
-                .setUsername(this.getName(user))
-                .setGuildName(this.getName(jid))
-                .setGuildIcon(ppgc)
-                .setMemberCount(groupMetadata.participants.length)
-                .setAvatar(pp)
-                .setBackground("https://telegra.ph/file/a8c63f66653b7676f5e2d.jpg")
-                .toAttachment()
-
-              let lea = await new knights.Goodbye()
-                .setUsername(this.getName(user))
-                .setGuildName(this.getName(jid))
-                .setGuildIcon(ppgc)
-                .setMemberCount(groupMetadata.participants.length)
-                .setAvatar(pp)
-                .setBackground("https://telegra.ph/file/7a93471059d1d3ac8caa2.jpg")
-                .toAttachment()
-
-              this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {
+              text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
+                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split('@')[0])
+              await this.send2ButtonLoc(jid, await (await fetch(fla + (action === 'add' ? 'welcome' : 'goodbye'))).buffer(), text, wm, action === 'add' ? 'Welcome' : 'Goodbye', 'ariffb', action === 'add' ? 'Off Welcome' : 'Off Goodbye', '.0 w', null, {
                 contextInfo: {
                   mentionedJid: [user]
                 }

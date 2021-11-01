@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-let winScore = 500
+let winScore = 5000
 async function handler(m) {
     this.game = this.game ? this.game : {}
     let id = 'family100_' + m.chat

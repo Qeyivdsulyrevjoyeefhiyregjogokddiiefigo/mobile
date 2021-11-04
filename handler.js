@@ -120,7 +120,7 @@ module.exports = {
           anticall: true,
           antispam: true,
           antitroli: true,
-          backup: false,
+          backup: true,
           backupDB: 0,
           groupOnly: false,
           jadibot: true,
@@ -399,7 +399,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://i.ibb.co/KhtRxwZ/dark.png")
+                .setBackground("https://telegra.ph/file/d8591fca931866a11909b.jpg")
                 .toAttachment()
 
               let lea = await new knights.Goodbye()
@@ -408,7 +408,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://i.ibb.co/KhtRxwZ/dark.png")
+                .setBackground("https://telegra.ph/file/38993cca345592ad06ff9.jpg")
                 .toAttachment()
 
               this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {

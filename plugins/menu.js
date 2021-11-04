@@ -34,7 +34,7 @@ const defaultMenu = {
 │ 𝚈𝚃 : https://youtu.be/_De5EgwBPM8
 │ 𝙸𝙶 :https://www.instagram.com/reteam.id/
 │ 𝙶𝙲 𝙱𝙾𝚃 : https://bit.ly/3zWEnWt
-│ NOTE : *ORANG BAIK ADALAH ORANG YANG MENGHARGAI KARYA KITA*
+│ NOTE : *Jangan Spam Ya Sayang*
 ╰━━━━━━━━━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙	
 	
 

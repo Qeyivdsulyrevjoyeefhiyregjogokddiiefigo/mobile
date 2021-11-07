@@ -376,42 +376,27 @@ module.exports = {
   },
   async participantsUpdate({ jid, participants, action }) {
     let chat = global.db.data.chats[jid] || {}
+    let groupMetadata = await this.groupMetadata(jid)
+    let groupMembers = groupMetadata.participants || ''
+    let groupName = this.getName(jid)
+    let bg = pickRandom(['https://telegra.ph/file/9ce7b042f88892829b63d.png', 'https://telegra.ph/file/04315347e4bf976da87c1.png', 'https://telegra.ph/file/c7e44f81032d5df389b1a.png', 'https://cdn.discordapp.com/attachments/850808002545319957/859359637106065408/bg.png'])
+    let d = new Date(new Date + 3600000)
+    let time = d.toLocaleTimeString('id', { hour: 'numeric', minute: 'numeric', second: 'numeric' })
     let text = ''
     switch (action) {
       case 'add':
       case 'remove':
         if (chat.welcome) {
-          let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
-            // let pp = './src/avatar_contact.png'
-            let pp = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
-            let ppgc = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
+            let pp = 'https://telegra.ph/file/69e73ddbc09ae9321148a.png'
             try {
               pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
-              ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
             } catch (e) {
             } finally {
-              text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
-                (chat.sBye || this.bye || conn.bye || 'Sampai jumpa, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-              let wel = await new knights.Welcome()
-                .setUsername(this.getName(user))
-                .setGuildName(this.getName(jid))
-                .setGuildIcon(ppgc)
-                .setMemberCount(groupMetadata.participants.length)
-                .setAvatar(pp)
-                .setBackground("https://telegra.ph/file/d8591fca931866a11909b.jpg")
-                .toAttachment()
-
-              let lea = await new knights.Goodbye()
-                .setUsername(this.getName(user))
-                .setGuildName(this.getName(jid))
-                .setGuildIcon(ppgc)
-                .setMemberCount(groupMetadata.participants.length)
-                .setAvatar(pp)
-                .setBackground("https://telegra.ph/file/38993cca345592ad06ff9.jpg")
-                .toAttachment()
-
-              this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {
+              text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace(/@subject/g, this.getName(jid)).replace(/@desc/g, groupMetadata.desc) :
+                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split('@')[0])
+              let img = `https://api.popcat.xyz/welcomecard?background=${bg}&text1=${encodeURIComponent(this.getName(user))}&text2=${action === 'add' ? `Welcome to ${this.getName(jid)}` : `Sayonara ${this.getName(user)}`}&text3=${time}&avatar=${pp}`
+              this.sendFile(jid, img, 'pp.jpg', text, null, false, {
                 contextInfo: {
                   mentionedJid: [user]
                 }

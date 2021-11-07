@@ -1,47 +1,15 @@
-const { MessageType } = require('@adiwajshing/baileys')
-const PhoneNumber = require('awesome-phonenumber')
-async function handler(m) {
-  let name = 'Reteam.id'
-  number = owner[0].replace(/[^0-9]/g, '')
-  let njid = number + '@s.whatsapp.net'
-  let onW = await this.isOnWhatsApp(njid) || { isBusiness: false }
-
-  let name2 = 'Wibu'
-  number2 = owner[1].replace(/[^0-9]/g, '')
-  let njid2 = number2 + '@s.whatsapp.net'
-  let onW2 = await this.isOnWhatsApp(njid2) || { isBusiness: false }
-
-  this.sendMessage(m.chat, {
-    contacts: [{
-      displayname: name, vcard: `
-BEGIN:VCARD
-VERSION:3.0
-N:;${name.replace(/\n/g, '\\n')};;;
-FN:${name.replace(/\n/g, '\\n')}
-TEL;type=CELL;type=VOICE;waid=${number}:${PhoneNumber('+' + number).getNumber('international')}${onW.isBusiness ? `
-X-WA-BIZ-NAME:${(this.contacts[njid].vname || this.getName(njid)).replace(/\n/, '\\n')}
-X-WA-BIZ-DESCRIPTION:${((await this.getBusinessProfile(njid)).description || '').replace(/\n/g, '\\n')}
-` : ''}
-END:VCARD
-`.trim()
-    }, {
-      displayname: name2, vcard: `
-BEGIN:VCARD
-VERSION:3.0
-N:;${name2.replace(/\n/g, '\\n')};;;
-FN:${name2.replace(/\n/g, '\\n')}
-TEL;type=CELL;type=VOICE;waid=${number2}:${PhoneNumber('+' + number2).getNumber('international')}${onW2.isBusiness ? `
-X-WA-BIZ-NAME:${(this.contacts[njid2].vname || this.getName(njid2)).replace(/\n/, '\\n')}
-X-WA-BIZ-DESCRIPTION:${((await this.getBusinessProfile(njid2)).description || '').replace(/\n/g, '\\n')}
-` : ''}
-END:VCARD
-`.trim()
-    }]
-  }, MessageType.contactsArray, { quoted: m })
+function handler(m) {
+   let listOwner = new Array()
+  for (let i of owner.map(v => v.replace(/\D/g, '') + '@s.whatsapp.net')) {
+  	listOwner.push({ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;;;;\nFN:${this.getName(i)}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Work\nURL;Web gwejh: http://github.com/Reteam\nEMAIL;y: ${this.user.name}@gmail.com\nORG: BUKAN BOT + NO SAVE\nTEL;Jgn lupa salam;waid= ${i.split('@')[0]}:${i.split('@')[0]}\nEND:VCARD` })
+  }
+  let send = this.sendMessage(m.chat, { displayName: listOwner.length + ' kontak', contacts: listOwner }, 'contactsArrayMessage', { quoted: m })
+return m.reply('*Chat to the point*\n\n *Basa basi g di jawab*')
 }
+
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
-
 handler.command = /^(owner|creator)$/i
 
 module.exports = handler
+

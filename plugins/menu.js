@@ -54,6 +54,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
+    'rpg': 'Rpg', 
     'game': 'Game',
     'xp': 'Exp & Limit',
     'sticker': 'Stiker',
@@ -75,8 +76,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot',
     'info': 'Info',
-    '': 'Tanpa Kategori',
-    'update': 'Fitur Baru', 
+  }
+if (teks == 'rpg') tags = {
+    'rpg': 'Rpg'
   }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -138,12 +140,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'info') tags = {
     'info': 'Info'
-  }
-  if (teks == 'tanpakategori') tags = {
-    '': 'Tanpa Kategori'
-  }
-  if (teks == 'update') tags = {
-    'update': 'Fitur Baru'
   }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
@@ -221,15 +217,17 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "*Menampilkan semua menu bot*",
                   "rowId": ".? all"
                 }, {
+                  "title": "Rpg",
+                  "description": "*Menu bermain rpg*",
+                  "rowId": ".? rpg"
+                }, {
                   "title": "Game",
                   "description": "*Menu bermain game & dapatkan xp*",
                   "rowId": ".? game"
-
                 }, {
                   "title": "XP & Limit",
                   "description": "*Menu cek Level xp & Limit*",
                   "rowId": ".? xp"
-
                 }, {
                   "title": "Stiker",
                   "description": "*Menu stiker dan lainnya*",
@@ -302,14 +300,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "title": "Info",
                   "description": "*Info tentang bot dan lainnya kak*",
                   "rowId": ".? info"
-                }, {
-                  "title": "Tanpa Kategori",
-                  "description": "\n\n-",
-                  "rowId": ".? tanpakategori"
-                }, {
-                  "title": "Update Fitur",
-                  "description": "*Fitur baru*\n*jika ada yang eror harap laporkan ya kak*\n\n*contoh #report laporanmu*",
-                  "rowId": ".? update"
                 }, {
                   "title": "Owner",
                   "description": "*Fitur ini khusus untuk pemilik bot ya kak*",
@@ -410,7 +400,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), 'https://www.instagram.com/reteam.id', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
+    await conn.sendButtonLoc(m.chat, await (await fetch(global.fla)).buffer(), text.trim(), 'WhatsAppCode', 'Sewa Bot', '.tts hubungi pemilik bot jika kamu mau sewa bot', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
